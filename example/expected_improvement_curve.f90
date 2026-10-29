@@ -16,6 +16,8 @@ program expected_improvement_curve
         mean(i) = -3.0_dp + 6.0_dp*real(i - 1, dp)/real(points - 1, dp)
     end do
     stddev = 1.0_dp
+    ! The incumbent is zero and the predictive standard deviation is one.
+    ! The .false. argument selects maximization.
     call expected_improvement(mean, stddev, 0.0_dp, .false., analytic, &
         status, dmean, dstddev)
     if (status /= profit_success) error stop "expected improvement failed"
