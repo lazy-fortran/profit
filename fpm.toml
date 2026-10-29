@@ -1,0 +1,20 @@
+name = "profit"
+version = "0.1.0"
+description = "Native Fortran study and experiment-design foundation"
+author = "Christopher Albert"
+license = "MIT"
+
+[build]
+auto-tests = true
+auto-examples = true
+
+[dependencies]
+openmp = "*"
+
+[dev-dependencies]
+test-drive = { git = "https://github.com/fortran-lang/test-drive.git", rev = "791484a79a24cbc00be6f74e53c6e030cb75efe2" }
+
+[fortran]
+implicit-typing = false
+implicit-external = false
+source-form = "free"
