@@ -1,6 +1,6 @@
 # Native proFit
 
-Native Fortran study and experiment-design foundation.
+An initial collection of native Fortran study primitives.
 
 This independent package shares the study goals of
 [Python proFit](https://github.com/redmod-team/profit). It has no Python runtime
@@ -32,8 +32,8 @@ call gaussian_scores(y, mean, stddev, z, rmse, nll, coverage, status)
 
 `y`, `mean` and `stddev` are equally sized vectors in the same physical units;
 `stddev` must be strictly positive. `rmse` is root mean squared error in those
-units. `nll` is the mean negative log Gaussian density, using natural logarithms
-and the supplied units. Rescaling all three vectors by a positive factor `a`
+units. `nll` is the mean negative log marginal Gaussian density, using natural logarithms
+and the supplied units. It does not evaluate a correlated joint likelihood. Rescaling all three vectors by a positive factor `a`
 multiplies `rmse` by `a` and adds `log(a)` to `nll`. `coverage` is the fraction
 with `abs(y-mean) <= z*stddev`. The caller selects `z`: for example,
 `1.959963984540054` denotes a central nominal 95% Gaussian interval. Empirical
