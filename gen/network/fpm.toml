@@ -1,0 +1,10 @@
+name = "profit-network-codegen"
+version = "0.1.0"
+
+[dependencies]
+fortsym = { git = "https://github.com/lazy-fortran/fortsym", rev = "063008070086aaf2d78f6e9d9a8fddff44c74a46" }
+
+[[executable]]
+name = "generate_network"
+source-dir = "src"
+main = "generate_network.f90"
