@@ -2,7 +2,7 @@ name = "profit-codegen"
 version = "0.1.0"
 
 [dependencies]
-fortsym = { git = "https://github.com/lazy-fortran/fortsym", rev = "063008070086aaf2d78f6e9d9a8fddff44c74a46" }
+fortsym = { git = "https://github.com/lazy-fortran/fortsym", rev = "b9ea95c5a0475b016b1e149875a9bec9d8562533" }
 
 [[executable]]
 name = "generate_study"
